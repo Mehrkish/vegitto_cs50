@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_setting"
+            android:title="تنظیمات" />
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_about"
+            android:title="درباره ما" />
+
+        <item
+            android:id="@+id/contact"
+            android:icon="@drawable/ic_contact"
+            android:title="تماس با ما" />
+
+        <item
+            android:id="@+id/dark_mode"
+            android:icon="@drawable/ic_dark_mode"
+            android:title="دارک مود" />
+
+        <item
+            android:id="@+id/sign_out"
+            android:iconTint="#F44336"
+            android:icon="@drawable/ic_sign_out"
+            android:title="خروج"
+            android:titleCondensed="#F44336"/>
+    </group>
+
+</menu>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/transition_header"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/profile_tabs"
+            motion:touchAnchorSide="top" />
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/profile_bio"
+               motion:framePosition="100"
+               android:alpha="-3" />
+           <KeyAttribute
+               motion:motionTarget="@+id/profile_followers"
+               motion:framePosition="100"
+               android:alpha="-2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/profile_followers_number"
+               motion:framePosition="100"
+               android:alpha="-2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/profile_followings_number"
+               motion:framePosition="100"
+               android:alpha="-2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/profile_followings"
+               motion:framePosition="100"
+               android:alpha="-2" />
+           <KeyPosition
+               motion:motionTarget="@+id/profile_pic"
+               motion:framePosition="75"
+               motion:keyPositionType="deltaRelative"
+               motion:percentX="1"
+               motion:percentY="1" />
+       </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_nested"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/nestedScrollView_account"
+            motion:touchAnchorSide="top"
+            motion:touchRegionId="@+id/nestedScrollView_account" />
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@+id/profile_bio"
+                motion:framePosition="100"
+                android:alpha="-3" />
+            <KeyAttribute
+                motion:motionTarget="@+id/profile_followers"
+                motion:framePosition="100"
+                android:alpha="-2" />
+            <KeyAttribute
+                motion:motionTarget="@+id/profile_followers_number"
+                motion:framePosition="100"
+                android:alpha="-2" />
+            <KeyAttribute
+                motion:motionTarget="@+id/profile_followings_number"
+                motion:framePosition="100"
+                android:alpha="-2" />
+            <KeyAttribute
+                motion:motionTarget="@+id/profile_followings"
+                motion:framePosition="100"
+                android:alpha="-2" />
+            <KeyPosition
+                motion:motionTarget="@+id/profile_pic"
+                motion:framePosition="75"
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:percentY="1" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/group_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+        <Constraint
+            android:layout_height="75dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="75dp"
+            motion:layout_constraintTop_toBottomOf="@+id/guideline_toolbar"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/profile_pic"
+            android:layout_marginStart="15dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/profile_username"
+            motion:layout_constraintStart_toEndOf="@+id/profile_pic"
+            motion:layout_constraintBottom_toBottomOf="@+id/profile_pic"
+            motion:layout_constraintTop_toTopOf="@+id/profile_pic"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/profile_tabs"
+            motion:layout_constraintTop_toBottomOf="@+id/profile_pic"
+            android:layout_marginTop="15dp" />
+    </ConstraintSet>
+</MotionScene>

@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Vegitto</string>
+
+    // registry fields
+    <string name="userName">نام کاربری</string>
+    <string name="user_input">تلفن همراه یا ایمیل</string>
+    <string name="password">کلمه عبور</string>
+    <string name="rePassword">تکرار کلمه عبور</string>
+    <string name="phone_number">شماره همراه</string>
+    <string name="logIn">ورود</string>
+    <string name="signUp">عضویت</string>
+    <string name="recovery">بازیابی رمز عبور</string>
+    <string name="registered">قبلا عضو شدم</string>
+
+    //title
+    <string name="food_name">نام غذا</string>
+    <string name="country_name">نام کشور</string>
+    <string name="meal_name">وعده غذایی</string>
+    <string name="calorie_amount">میزان کالری</string>
+    <string name="time_amount">مدت زمان</string>
+    <string name="raw_material">مواد اولیه</string>
+    <string name="amount">مقدار</string>
+    <string name="breakfast">صبحانه</string>
+    <string name="lunch">ناهار</string>
+    <string name="dinner">شام</string>
+    <string name="dessert">دسر</string>
+    <string name="ingredients">افزودن مواد اولیه</string>
+    <string name="detail">آیا نیاز به توضیحات اضافه دارید؟</string>
+    <string name="add_new">افزودن مورد جدید</string>
+    <string name="add_steps">افزودن مراحل</string>
+
+
+    // Bottom Navigation
+    <string name="homepage_icon">خانه</string>
+    <string name="account_icon">پروفایل</string>
+    <string name="notifications_icon">زنگوله</string>
+    <string name="posting_icon">ایجاد پست</string>
+    <string name="back_step">صفحه قبل</string>
+    <string name="next_step">ادامه</string>
+    <string name="record">ثبت</string>
+    
+
+    // Navigation Drawer
+
+    // Toolbar
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="option_menu">Option Menu</string>
+    <string name="search">جستجو</string>
+    <string name="back_pressed">back_pressed</string>
+
+    // Homepage
+    <string name="how_the_food_looks_like">how the food looks like</string>
+
+    // Tabs
+    <string name="contents">محتوا</string>
+    <string name="recipe">دستور پخت</string>
+    <string name="favoritePost">مورد علاقه</string>
+    <string name="userPost">پست ها</string>
+
+    // Refresh Button
+    <string name="refresh_data">refresh_data</string>
+
+    // Search Fragment
+    <string name="search_based_on_food_title">اسم غذا</string>
+    <string name="title_activity_registry">RegistryActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="food_ingredients">نام ماده غذایی را تایپ بفرمایید …</string>
+
+    // Account Fragment
+    <string name="profile_sharing">profile_sharing</string>
+    <string name="messaging">messaging</string>
+    <string name="prof_pic">prof_pic</string>
+
+</resources>

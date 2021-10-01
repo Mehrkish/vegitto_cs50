@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_nav_graph"
+    app:startDestination="@id/common">
+
+    <fragment
+        android:id="@+id/signUp"
+        android:name="ir.vegitto.registry.signUp.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_registry_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_logIn"
+            app:destination="@id/logIn"
+            app:popUpTo="@+id/signUp"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/logIn"
+        android:name="ir.vegitto.registry.logIn.LogIn"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_registry_log_in" >
+        <action
+            android:id="@+id/action_logIn_to_signUp"
+            app:destination="@id/signUp"
+            app:popUpTo="@+id/logIn"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/common"
+        android:name="ir.vegitto.registry.common.Common"
+        android:label="Common"
+        tools:layout="@layout/fragment_registry_common">
+        <action
+            android:id="@+id/action_common_to_logIn"
+            app:destination="@id/logIn" />
+        <action
+            android:id="@+id/action_common_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".main.posting.PostingFragment1">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_layout"
+        android:backgroundTint="@color/gray">
+
+        <!-- image -->
+        <ImageView
+            android:id="@+id/posting_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/gray"
+            android:contentDescription="TODO"
+            android:src="@drawable/ic_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_layout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/posting_image">
+
+            <TextView
+                android:id="@+id/posting_TV_foodName"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/food_name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/posting_V_foodName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/posting_V_foodName"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/ic_star"
+                android:backgroundTint="#FFE500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/posting_ET_foodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="@color/gray"
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minWidth="50dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/posting_TV_foodName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/posting_TV_region"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/country_name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/posting_V_region"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_foodName" />
+
+            <View
+                android:id="@+id/posting_V_region"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/ic_star"
+                android:backgroundTint="#FFE500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_foodName" />
+
+            <EditText
+                android:id="@+id/posting_ET_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="@color/gray"
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minWidth="50dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/posting_TV_region"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_foodName" />
+            <!-- check box -->
+            <TextView
+                android:id="@+id/posting_TV_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/meal_name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/posting_V_meal"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_region" />
+
+            <View
+                android:id="@+id/posting_V_meal"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_star"
+                android:backgroundTint="#FFE500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_region" />
+
+
+            <CheckBox
+                android:id="@+id/posting_CB_breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/breakfast"
+                app:layout_constraintStart_toEndOf="@id/posting_TV_meal"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_region" />
+
+            <CheckBox
+                android:id="@+id/posting_CB_lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/lunch"
+                app:layout_constraintStart_toEndOf="@id/posting_CB_breakfast"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_region" />
+
+            <CheckBox
+                android:id="@+id/posting_CB_dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/dinner"
+                app:layout_constraintStart_toEndOf="@id/posting_CB_lunch"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_region" />
+
+            <CheckBox
+                android:id="@+id/posting_CB_dessert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/dessert"
+                app:layout_constraintStart_toEndOf="@id/posting_CB_dinner"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_region" />
+
+            <TextView
+                android:id="@+id/posting_TV_calorie"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/calorie_amount"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_meal" />
+
+            <EditText
+                android:id="@+id/posting_ET_calorie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="@color/gray"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxWidth="100dp"
+                android:minWidth="50dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/posting_TV_calorie"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_meal" />
+
+            <TextView
+                android:id="@+id/posting_TV_time"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/time_amount"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/posting_V_time"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_meal" />
+
+            <View
+                android:id="@+id/posting_V_time"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/ic_star"
+                android:backgroundTint="#FFE500"
+                app:layout_constraintStart_toEndOf="@id/posting_ET_calorie"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_meal" />
+
+            <EditText
+                android:id="@+id/posting_ET_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="@color/gray"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxWidth="100dp"
+                android:minWidth="50dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/posting_TV_time"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_meal" />
+
+            <!-- more details-->
+            <TextView
+                android:id="@+id/posting_TV_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/detail"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_calorie" />
+
+            <EditText
+                android:id="@+id/posting_ET_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="@color/gray"
+                android:gravity="start"
+                android:inputType="text"
+                android:maxEms="45"
+                android:maxLength="100"
+                android:maxLines="2"
+                android:minLines="1"
+                android:singleLine="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_detail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_layout"
+            android:padding="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint1">
+
+            <!-- recycle view 1 -->
+            <TextView
+                android:id="@+id/posting_TV_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/posting_TV_material"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/raw_material"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_ingredients" />
+
+            <TextView
+                android:id="@+id/posting_TV_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/amount"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_ingredients" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/posting_RV_foods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layoutDirection="rtl"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_TV_material"
+                tools:listitem="@layout/fragment_posting_materials_item" />
+
+            <ImageView
+                android:id="@+id/posting_IV_material"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_add"
+                android:contentDescription="TODO"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_RV_foods" />
+
+            <Button
+                android:id="@+id/posting_B_add_material"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@null"
+                android:text="@string/add_new"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/posting_IV_material"
+                app:layout_constraintTop_toBottomOf="@id/posting_RV_foods" />
+
+            <Button
+                android:id="@+id/posting_B_next_step"
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded_2"
+                android:text="ادامه"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/posting_B_add_material" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

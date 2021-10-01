@@ -1,0 +1,47 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_food_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:id="@+id/linear_food_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <com.mikhaellopez.circleview.CircleView
+            android:id="@+id/food_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cv_color="@color/colorAccent" />
+
+        <LinearLayout
+            android:id="@+id/food_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/food_title_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="عنوان غذا"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <TextView
+                android:id="@+id/ingredients_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مواد اولیه"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

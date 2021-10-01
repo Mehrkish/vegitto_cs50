@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ir.vegitto.main.homepage.HomepageFragment"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_food"
+            app:destination="@id/navigation_food" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_posting"
+        android:name="ir.vegitto.main.posting.PostingFragment1"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_posting1" >
+        <action
+            android:id="@+id/action_navigation_posting_to_postingFragment2"
+            app:destination="@id/postingFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="ir.vegitto.main.notifications.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="ir.vegitto.main.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/navigation_food"
+        android:name="ir.vegitto.main.homepage.post.FoodFragment"
+        android:label="fragment_food"
+        tools:layout="@layout/fragment_food"/>
+    <dialog
+        android:id="@+id/navigation_search"
+        android:name="ir.vegitto.main.homepage.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_home"
+            app:destination="@id/navigation_home">
+        </action>
+    </dialog>
+    <fragment
+        android:id="@+id/postingFragment2"
+        android:name="ir.vegitto.main.posting.PostingFragment2"
+        android:label="PostingFragment2" />
+</navigation>
