@@ -7,7 +7,7 @@ To meet the primary requirements of such a platform, we decided to focus on the 
 
 Here are some of the main components of our project (*In this project we use MVVP architecture*):
 
-# Android
+# ANDROID
 >## Models
 
 >>### Food.java
@@ -48,7 +48,17 @@ This activity nests two main fragments:
 
 There is another package in our project called roomDB. Here all the processe regarding saving the most recent foods' data are saved for the sake of when the internet is down.
 
-Now we go through how the *Backend* works.
+## Layouts && Fragments
+
+- Registry Fragment : The page which includes two choices (Log in or sign up) along application names and logos. 
+- Homepage Fragment :  This page is included the foods which were published and will be shown.
+- Food content Fragment : The page in which you can understand and publish how to cook foods. It contains the name of the food,meal and the amount of calorie and its ingredient.
+- Profile Fragment : The page which includes personal information and it's settings.
+- Search Fragmnet : In this page we can search for foods that we need.
+- Notification Fragment : This page is supposed to be created.
+- Food Fragmnet : In this page you can observe the details,comments and the recipe of each food.
+
+Now let's go through how the *Backend* works.
 
 # BACKEND
 In this project we used Django framework for back-end part. also, used REST API for transfering data to clients. we use Android client for showing data to clients. 
