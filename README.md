@@ -7,7 +7,7 @@ To meet the primary requirements of such a platform, we decided to focus on the 
 
 Here are some of the main components of our project (*In this project we use MVVP architecture*):
 
-# ANDROID
+# Android
 >## Models
 
 >>### Food.java
@@ -60,7 +60,7 @@ There is another package in our project called roomDB. Here all the processe reg
 
 Now let's go through how the *Backend* works.
 
-# BACKEND
+# Backend
 In this project we used Django framework for back-end part. also, used REST API for transfering data to clients. we use Android client for showing data to clients. 
 
 ## Django folder apps
