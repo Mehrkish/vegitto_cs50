@@ -5,7 +5,7 @@ Vegitto is a community devoted to those in favor of non-meat diets: Vegetarianis
 
 To meet the primary requirements of such a platform, we decided to focus on the most basics, yet necessary features. During this short period, we could build an android app where our users can share their food recipes and view others' shared recipes.
 
-Here are some of the main components of our project (*In this project we use MVVP architecture*):
+Here are some of the main components of our android project (*In this project we use MVVP architecture*):
 
 # Android
 >## Models
