@@ -9,6 +9,15 @@
 
 ## Classes and Components
 
-### 
+### Food.java
+#### This class is a model for our food objects. Every food includes many variables such as id, name, ingredient and etc.
+
+#### The food class itself contains two classes: Ingredient and StepRecipe
+
+#### Ingredient
+##### This is a model designed to hold an instance of every ingredients of a food.
+
+#### StepRecipe
+##### This is basically a model made to hold an instance of each step of a recipe.
 
 
